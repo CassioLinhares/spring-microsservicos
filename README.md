@@ -115,7 +115,7 @@ Principais rotas pelo Gateway:
 - `PUT /entregas-ms/entregas/{id}/transporte`
 - `GET /entregas-ms/entregas/porta`
 
-## Observacoes
+## Observações
 
 - O Eureka Dashboard fica disponivel em `http://localhost:5050`.
 - O Gateway fica disponivel em `http://localhost:5051`.
