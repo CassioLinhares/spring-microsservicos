@@ -1,0 +1,334 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: spring-microsservicos
+meta:
+  id: wrk_1acb4dc29f984008adc7a1f20bf8013a
+  created: 1779565343764
+  modified: 1779652658473
+  description: ""
+collection:
+  - name: PEDIDOS
+    meta:
+      id: fld_4ac7ff98e63b4c5ba74b7f9579f4d199
+      created: 1711820301143
+      modified: 1779565374108
+      sortKey: -1711820301143
+      description: ""
+    children:
+      - url: http://localhost:5051/pedidos-ms/pedidos
+        name: Criar Pedido
+        meta:
+          id: req_a3596ddac31f48f3b24516ec40f05747
+          created: 1711816288850
+          modified: 1779649647313
+          isPrivate: false
+          description: ""
+          sortKey: -1711820307618
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nomeCliente": "Pedro da Silva",
+            	"valor": 451.99,
+            	"dataPedido": "2024-03-12"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/8.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5051/pedidos-ms/pedidos/100
+        name: Buscar pedido pelo número
+        meta:
+          id: req_bd286c42125c4261acad5cfd36677f00
+          created: 1711819069036
+          modified: 1779650008629
+          isPrivate: false
+          description: ""
+          sortKey: -1711820307599.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/8.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5051/pedidos-ms/pedidos
+        name: Exibir todos os pedidos
+        meta:
+          id: req_4f6e7a9b2a7942c88c5690adb565119d
+          created: 1711819956531
+          modified: 1712340555352
+          isPrivate: false
+          description: ""
+          sortKey: -1711820307605.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/8.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5051/pedidos-ms/pedidos
+        name: Atualizar Pedido
+        meta:
+          id: req_fdf19a24ff884c3db72e0aca64d15d07
+          created: 1711973070288
+          modified: 1779650015674
+          isPrivate: false
+          description: ""
+          sortKey: -1711820307593
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"numeroPedido": 1,
+            	"nomeCliente": "Gustavo Gomes",
+            	"valor": 133.222,
+            	"statusEntrega": "ENTREGUE"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/8.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5051/pedidos-ms/pedidos/30
+        name: Excluir pedido pelo número
+        meta:
+          id: req_f5175501a7c44cc7bf550ec364784be4
+          created: 1711973232597
+          modified: 1779650022568
+          isPrivate: false
+          description: ""
+          sortKey: -1711788313611
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/8.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5051/pedidos-ms/pedidos/porta
+        name: mostrar porta
+        meta:
+          id: req_430a1905191d494088f776aa44c8b4ae
+          created: 1779633544466
+          modified: 1779633603964
+          isPrivate: false
+          description: ""
+          sortKey: -1711820307602.375
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/8.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5051/pedidos-ms/pedidos/1/transporte
+        name: atualizar status para transporte
+        meta:
+          id: req_ecc7c09d8f764a6181042c16527b6ef3
+          created: 1779649826071
+          modified: 1779649845005
+          isPrivate: false
+          description: ""
+          sortKey: -1711820307611.75
+        method: PATCH
+        headers:
+          - name: User-Agent
+            value: insomnia/8.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: ENTREGAS
+    meta:
+      id: fld_32d256383b164abf902a54d9812d2003
+      created: 1711820322825
+      modified: 1711820322825
+      sortKey: -1711820322825
+      description: ""
+    children:
+      - url: http://localhost:5051/entregas-ms/entregas
+        name: Criar Entrega
+        meta:
+          id: req_0d34a69370424d70933fc3b52888a92b
+          created: 1711820340192
+          modified: 1779629425718
+          isPrivate: false
+          description: ""
+          sortKey: -1711971935288
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"numeroPedido": 1,
+            	"nomeEntregador": null,
+            	"statusEntrega": "EM_SEPARACAO",
+            	"dataEntrega": null
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/8.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5051/entregas-ms/entregas/1
+        name: Buscar entrega pelo número
+        meta:
+          id: req_fcd24b8b60c74b238281a961c09b05cd
+          created: 1711972983860
+          modified: 1779649970247
+          isPrivate: false
+          description: ""
+          sortKey: -1711943505099.875
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/8.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5051/entregas-ms/entregas
+        name: Listar todas as entregas
+        meta:
+          id: req_cc60faf4846548fbb65d967a04512b63
+          created: 1711973021950
+          modified: 1779649932482
+          isPrivate: false
+          description: ""
+          sortKey: -1711952981829.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/8.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5051/entregas-ms/entregas
+        name: Atualizar Entrega
+        meta:
+          id: req_20b3590ea87f479f85c5380e4182063d
+          created: 1711976649106
+          modified: 1779649979629
+          isPrivate: false
+          description: ""
+          sortKey: -1711934028370.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"numeroEntrega": 1,
+            	"numeroPedido": 2,
+            	"nomeEntregador": "Marcos da Silva",
+            	"statusEntrega": "EM_TRANSPORTE",
+            	"dataEntrega": null
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/8.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:5051/entregas-ms/entregas/porta
+        name: mostrar porta
+        meta:
+          id: req_6c623810867f403b9b43143e1e819c6c
+          created: 1779633808951
+          modified: 1779633825366
+          isPrivate: false
+          description: ""
+          sortKey: -1711938766735.1875
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/8.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_f6075ebe2a39491b9059dc540e002fb3
+    created: 1711816283049
+    modified: 1711816283049
+environments:
+  name: Base Environment
+  meta:
+    id: env_72f6a7adb5fe4d53997ea0c1858888bc
+    created: 1711816283047
+    modified: 1711816283047
+    isPrivate: false
